@@ -46,7 +46,7 @@ const Jobs = ({input}) => {
         <Grid container className='flex justify-center items-center py-6 px-6 md:px-40 mt-6'>
         {filteredData.map((items) => (
           <Grid items xs={12} lg={3} xl={6}>
-            <Card elevation={0} className="cards mx-6 my-6">
+            <Card elevation={0} className="cards mx-2 md:mx-6 my-6">
               <CardContent>
                 <p className='font-dm font-medium text-md text-slate-500' >
                   {items.company}
