@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.text-span{
+  background-repeat: no-repeat;
+  padding: 20px 50px 20px 40px;
+  background-image: url(./assets/loop.svg);
+}
+
+@media only screen and (min-width:1440px){
+  .text-span{
+    padding-top:20px; 
+    padding-left: 60px;
+    padding-right: 70px;
+    background-size: 300px;
+  }
+}
+
+@media only screen and (min-width:786px){
+  .text-span{
+    padding-top:20px; 
+    padding-left: 60px;
+    padding-right: 70px;
+    background-size: 300px;
+  }
+}
+
+
+
+.cards{
+  border: 1px solid #9AEE93;
+  padding: 10px;
+  min-width: 275;
 }
