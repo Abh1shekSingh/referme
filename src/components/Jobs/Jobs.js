@@ -37,8 +37,6 @@ const Jobs = ({input}) => {
     }
   })
 
-
-
   return (
     <>
       <div >
