@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import {BiTimeFive,BiRocket} from "react-icons/bi"
 import {GoLocation} from "react-icons/go"
 
-const Jobs = () => {
+const Jobs = ({input}) => {
   let cancelToken;
   const [jobs, setJobs] = useState([]);
 
@@ -16,6 +16,7 @@ const Jobs = () => {
   }
 
   cancelToken = axios.CancelToken.source();
+
   useEffect(() => {
       const getJobsData = async() => {
         await axios.get("https://refertest.pythonanywhere.com/job/openings",{cancelToken:cancelToken.token})
@@ -27,22 +28,24 @@ const Jobs = () => {
       getJobsData();
   }, [])
   
-  console.log(jobs)
-
+  // console.log(jobs)
+  const filteredData = jobs.filter((item) => {
+    if(input === ' '){
+      return item;
+    }else{
+      return item.designation.toLowerCase().includes(input)
+    }
+  })
 
 
 
   return (
     <>
-      <div className='py-20 md:py-28'>
-        <div className='flex items-center flex-col gap-6 justify-center mt-14 px-6 '>
-          <h1 className='font-b612 font-bold text-5xl text-center md:leading-relaxed leading-relaxed text-black md:text-8xl'>Job Hiring Made <br></br> <span className='text-span'>Easy</span></h1>
-          <p className='font-dm leading-relaxed text-center'>This is just our way of saying <span className='border-t-0 border-l-0 border-r-0 border-lime-200 border-solid border-4 '>thanks</span></p>
-        </div>
+      <div >
+        
         <Grid container className='flex justify-center items-center py-6 px-6 md:px-40 mt-6'>
-        {jobs.map((items) => (
+        {filteredData.map((items) => (
           <Grid items xs={12} lg={3} xl={6}>
-          
             <Card elevation={0} className="cards my-2 mx-2">
               <CardContent>
                 <p className='font-dm font-medium text-md text-slate-500' >
