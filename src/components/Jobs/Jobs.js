@@ -18,7 +18,7 @@ const Jobs = () => {
   cancelToken = axios.CancelToken.source();
   useEffect(() => {
       const getJobsData = async() => {
-        await axios.get("http://refertest.pythonanywhere.com/job/openings",{cancelToken:cancelToken.token})
+        await axios.get("https://refertest.pythonanywhere.com/job/openings",{cancelToken:cancelToken.token})
         .then((response) => {
           setJobs(response.data.data)
         })

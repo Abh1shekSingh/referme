@@ -14,7 +14,7 @@ const Header = () => {
    
     useEffect(() => {
         const getUserData = async() => {
-            await axios.get("http://refertest.pythonanywhere.com/user/data",{cancelToken :cancelToken.token})
+            await axios.get("https://refertest.pythonanywhere.com/user/data",{cancelToken :cancelToken.token})
             .then((response) => {
                 setUser(response.data.data)
             })
