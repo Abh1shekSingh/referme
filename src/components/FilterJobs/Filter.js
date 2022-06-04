@@ -23,7 +23,7 @@ const Filter = () => {
         <div className='flex justify-center items-center my-8'>
             <input 
                 type="search" 
-                className='border-2 border-green-300 py-2 px-6 rounded outline-none' 
+                className='border-2 border-blue-400 font-dm text-lg py-2 px-6 rounded outline-none' 
                 placeholder='Search Job Title' 
                 onChange={handleChange} 
             />

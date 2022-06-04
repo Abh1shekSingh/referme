@@ -35,7 +35,7 @@ const Header = () => {
 
             <div className='flex justify-center items-center gap-2'>
                 <VscReferences className='md:text-4xl' />
-                <h1 className='font-dm text-xl font-bold md:text-4xl '>Refer <span className='text-green-300'>Me</span></h1>
+                <h1 className='font-dm text-xl font-bold md:text-4xl '>Refer <span className='text-blue-400'>Me</span></h1>
             </div>
             
                 <div className='flex items-center justify-center gap-2 font-dm text-sm'>

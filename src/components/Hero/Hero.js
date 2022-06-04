@@ -7,7 +7,7 @@ const Hero = () => {
             Job Hiring Made <br></br> <span className='text-span'>Easy</span>
         </h1>
         <p className='font-dm md:text-lg leading-relaxed text-center'>
-          This is just our way of saying <span className='border-t-0 border-l-0 border-r-0 border-lime-200 border-solid border-4 '>thanks</span>
+          This is just our way of saying <span className='border-t-0 border-l-0 border-r-0 border-blue-400 border-solid border-4 '>thanks</span>
         </p>
     </div>
   )

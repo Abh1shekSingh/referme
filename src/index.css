@@ -45,9 +45,13 @@ code {
 
 
 .cards{
-  border: 1px solid #9AEE93;
+  border: 1px solid #60a5fa;
+  box-shadow: 10px 10px 0px #60a5fa !important;
   padding: 10px;
   min-width: 275;
+}
+.cards:hover{
+  box-shadow: 5px 5px 0px #60a5fa !important;
 }
 
 

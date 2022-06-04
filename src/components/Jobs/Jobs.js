@@ -46,7 +46,7 @@ const Jobs = ({input}) => {
         <Grid container className='flex justify-center items-center py-6 px-6 md:px-40 mt-6'>
         {filteredData.map((items) => (
           <Grid items xs={12} lg={3} xl={6}>
-            <Card elevation={0} className="cards my-2 mx-2">
+            <Card elevation={0} className="cards mx-6 my-6">
               <CardContent>
                 <p className='font-dm font-medium text-md text-slate-500' >
                   {items.company}
@@ -67,13 +67,13 @@ const Jobs = ({input}) => {
                   </p>
                   <ul className='flex flex-wrap gap-2'>
                     {items.skills.map((item) => (
-                          <li className='border text-sm text-white py-1 px-3 rounded-full border-2 border-green-300 bg-green-300'>{item}</li>
+                          <li className='border text-sm text-white py-1 px-3 rounded-full border-3 border-blue-400 bg-blue-400'>{item}</li>
                     ))}
                   </ul>
                 </div>
               </CardContent>
               <CardActions>
-                <button className='flex justify-center font-dm items-center border border-2 py-2 px-8 border-green-300 rounded  hover:border-black transtion-all duration-300'>Apply</button>
+                <button className='flex justify-center font-dm items-center border border-2 py-2 px-8 border-blue-400 rounded  hover:border-black transtion-all duration-300'>Apply</button>
               </CardActions>
             </Card>
           </Grid>
