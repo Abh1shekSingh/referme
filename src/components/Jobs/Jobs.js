@@ -54,23 +54,23 @@ const Jobs = () => {
                 
                 
                 <div className='pt-5 font-dm flex flex-col gap-1'>
-                  <p className='flex items-center gap-2 text-black'><BiTimeFive />
+                  <p className='flex items-center gap-2 text-black font-medium'><BiTimeFive />
                     {items.min_experience <= 0 ? 'Fresher' : items.min_experience +' year'}
                   </p>
-                  <p className='flex items-center gap-2'><GoLocation />{items.location}</p>
-                  <p className='flex items-center gap-2'>
+                  <p className='flex items-center gap-2 font-medium'><GoLocation />{items.location}</p>
+                  <p className='flex items-center gap-2 font-medium'>
                     <BiRocket />
-                    Skills Required
+                    Skill(s) Required
                   </p>
-                  <ul className='flex gap-2'>
+                  <ul className='flex flex-wrap gap-2'>
                     {items.skills.map((item) => (
-                          <li className='border text-white py-1 px-2 rounded-full border-2 border-lime-400 bg-lime-400'>{item}</li>
+                          <li className='border text-sm text-white py-1 px-3 rounded-full border-2 border-green-300 bg-green-300'>{item}</li>
                     ))}
                   </ul>
                 </div>
               </CardContent>
               <CardActions>
-                <button className='flex justify-center font-dm items-center border border-2 py-2 px-8 border-lime-300 rounded  hover:border-black transtion-all duration-300'>Apply</button>
+                <button className='flex justify-center font-dm items-center border border-2 py-2 px-8 border-green-300 rounded  hover:border-black transtion-all duration-300'>Apply</button>
               </CardActions>
             </Card>
           </Grid>
