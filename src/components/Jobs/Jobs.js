@@ -4,12 +4,9 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
 import {BiTimeFive,BiRocket} from "react-icons/bi"
 import {GoLocation} from "react-icons/go"
-import {AiOutlineStar} from "react-icons/ai"
 
-// import flipkart from "../../assets/flipkart.png"
 const Jobs = () => {
   let cancelToken;
   const [jobs, setJobs] = useState([]);
@@ -49,7 +46,6 @@ const Jobs = () => {
             <Card elevation={0} className="cards my-2 mx-2">
               <CardContent>
                 <p className='font-dm font-medium text-md text-slate-500' >
-                  {/* <img src={items.company} alt={items.company+"logo"} width={50}></img> */}
                   {items.company}
                 </p>
                 <p className='font-b612  text-lg font-bold text-black'>
