@@ -5,7 +5,6 @@ import {VscReferences}  from 'react-icons/vsc'
 const Header = () => {
     let cancelToken;
     const [user, setUser] = useState([]);
-    const abortController = new AbortController();
 
     if(typeof cancelToken != typeof undefined) {
         cancelToken.cancel('Canceling Previous Request..');
@@ -14,15 +13,15 @@ const Header = () => {
     cancelToken = axios.CancelToken.source()
    
     useEffect(() => {
-        
-        axios.get("https://refertest.pythonanywhere.com/user/data",{cancelToken :cancelToken.token , signal:abortController.signal })
-        .then((response) => {
-            setUser(response.data.data)
-        }) 
-        
-        return () => {
-            abortController.abort();
+        const getUserData = async() => {
+            await axios.get("https://refertest.pythonanywhere.com/user/data",{cancelToken :cancelToken.token})
+            .then((response) => {
+                setUser(response.data.data)
+            })
+            
         };
+
+        getUserData(); 
  
     }, []); 
 
