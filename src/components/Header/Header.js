@@ -1,3 +1,4 @@
+
 import React,{useEffect,useState} from 'react'
 import axios from "axios"
 import Avatar from '@mui/material/Avatar';
@@ -22,7 +23,7 @@ const Header = () => {
         };
 
         getUserData(); 
- 
+ // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []); 
 
     console.log(user)
@@ -31,7 +32,7 @@ const Header = () => {
     
 
   return (
-      <>
+      
         <div className='flex top-0 left-0 right-0 z-10 backdrop-blur fixed shadow-sm justify-between items-center py-3 px-5 md:px-20 md:py-6 text-black'>
 
             <div className='flex justify-center items-center gap-2'>
@@ -48,7 +49,7 @@ const Header = () => {
             </div>
            
         </div>
-      </>
+      
     
   )
 }

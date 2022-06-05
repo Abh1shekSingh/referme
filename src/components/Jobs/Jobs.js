@@ -26,6 +26,7 @@ const Jobs = ({input}) => {
       }  
 
       getJobsData();
+      // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   
   // console.log(jobs)
@@ -38,7 +39,7 @@ const Jobs = ({input}) => {
   })
 
   return (
-    <>
+    
       <div >
         
         <Grid container className='flex justify-center items-center py-6 px-6 md:px-40 mt-6'>
@@ -80,7 +81,7 @@ const Jobs = ({input}) => {
         </Grid>
 
       </div>
-    </>
+    
   )
 }
 
